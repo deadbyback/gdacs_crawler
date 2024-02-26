@@ -11,8 +11,13 @@ into the `hazard.gdacs_events` layer located in PosgreSQL/PostGIS database.
 
 ### Docker container
 
-Launch Dockerfile  
-   `python3 -m pip install psycopg2-binary`
+Build Dockerfile and run the container 
+
+   `docker build . -t crawler`
+
+   `docker images ls`
+
+   `docker run -e POSTGRES_PASSWORD=<password> <image_tag> `
 
 OR
 

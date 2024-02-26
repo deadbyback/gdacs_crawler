@@ -38,25 +38,6 @@ CREATE INDEX IF NOT EXISTS hazard_gdacs_events_wkb_geometry_geom_idx
     ON hazard.gdacs_events
     USING gist (geom);
 
-CREATE INDEX IF NOT EXISTS hazard_gdacs_events_earthquake_type_idx
-    ON hazard.gdacs_events
-    WHERE event_type = 'EQ';
-
-CREATE INDEX IF NOT EXISTS hazard_gdacs_events_cyclones_type_idx
-    ON hazard.gdacs_events
-    WHERE event_type = 'TC';
-
-CREATE INDEX IF NOT EXISTS hazard_gdacs_events_floods_type_idx
-    ON hazard.gdacs_events
-    WHERE event_type = 'FL';
-
-CREATE INDEX IF NOT EXISTS hazard_gdacs_events_volcano_type_idx
-    ON hazard.gdacs_events
-    WHERE event_type = 'VO';
-
-CREATE INDEX IF NOT EXISTS hazard_gdacs_events_drought_type_idx
-    ON hazard.gdacs_events
-    WHERE event_type = 'DR';
 
 CREATE TABLE IF NOT EXISTS hazard.another_service_events
 (
